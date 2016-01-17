@@ -31,6 +31,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
 		<link rel="stylesheet" type="text/css" href="FontAwesome/css/font-awesome.css">
 
+		<script type="text/javascript" src="js/live.js"></script>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 
@@ -63,6 +64,7 @@
 				});
 		</script>
 		<!-- /END NAV SCRIPT -->
+
 	</head>
 	<body>
 		<!-- START HEADER -->
@@ -154,19 +156,23 @@
 							<p>India's largest real time tickets booking system</p>
 						</div>
 						<div class="h-body">
+							<form method="post" action="searchbus.php">
 							<div class="cell">
 								<h5>From :</h5>
-								<input type="text" placeholder="Select City">
+								<input type="text" name="from" list="source" onkeyup="source(this.value)" required placeholder="Select City">
+								<datalist id="source"></datalist>
 							</div><div class="cell">
 								<h5>To :</h5>
-								<input type="text" placeholder="Select City">
+								<input type="text" name="to" list="destination" onkeyup="destination(this.value)" required placeholder="Select City">
+								<datalist id="destination"></datalist>
 							</div><div class="cell book_date">
 								<h5>Date :</h5>
-								<input type="text" id="datepicker" placeholder="DD/MM/YYYY">
+								<input type="text" name="on" id="datepicker" required placeholder="DD/MM/YYYY">
 							</div><div class="cell">
 								<h5></h5>
-								<input type="submit" value="Search Bus">
+								<input type="submit" name="sbus" value="Search Bus">
 							</div>
+							</form>
 						</div>
 					</div>
 				</div>

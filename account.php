@@ -101,14 +101,14 @@
 				<!-- START MENU -->
 				<div class="h_right">
 					<ul class="menu" style="float:right;">
-						| <li class="active"><a href="index.php">Home</a></li> |
+						| <li><a href="index.php">Home</a></li> |
 						<li><a href="cancel.html">Print / Cancel Ticket</a></li> | |
 
 						<?php
 							if ($sessionState == 1) {
 						?>
 
-						<li><a href="account.php"><?php
+						<li class="active"><a href="account.php"><?php
 													if ($row_chkmail['user_name'] != '') {
 														echo $row_chkmail['user_name'];
 													} else {
@@ -134,14 +134,14 @@
 				<div class="top-nav">
 				<nav class="clearfix">
 						<ul>
-							<li class="active"><a href="index.php">Home</a></li> 
+							<li><a href="index.php">Home</a></li> 
 							<li><a href="cencel.html">Cancel Ticket</a></li>
 
 							<?php
 								if ($sessionState == 1) {
 							?>
 
-							<li><a href="account.php"><?php
+							<li class="active"><a href="account.php"><?php
 														if ($row_chkmail['user_name'] != '') {
 															echo $row_chkmail['user_name'];
 														} else {
