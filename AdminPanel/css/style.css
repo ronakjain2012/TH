@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+    font-family: 'zektonitalic';
+    src: url('zektonit-webfont.eot');
+    src: url('zektonit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('zektonit-webfont.woff2') format('woff2'),
+         url('zektonit-webfont.woff') format('woff'),
+         url('zektonit-webfont.ttf') format('truetype'),
+         url('zektonit-webfont.svg#zektonitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'libertadbold_italic';
+    src: url('libertad-bolditalic-webfont.eot');
+    src: url('libertad-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('libertad-bolditalic-webfont.woff2') format('woff2'),
+         url('libertad-bolditalic-webfont.woff') format('woff'),
+         url('libertad-bolditalic-webfont.ttf') format('truetype'),
+         url('libertad-bolditalic-webfont.svg#libertadbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.main {
+	background:#F4F4F4;
+	color:#6C6C6C;	
+	font-family:"zektonitalic";
+}
+
+.mainAdmin {
+	background:#F4F4F4;	
+}
+
+.padding-20 {
+	padding: 80px 20px 20px 20px;
+}
+
+.margin-top-30 {
+	margin: 30px 0px 0px 0px;	
+}
+
+#main input {
+	height:50px;
+	color:#000000;
+	font-weight:500;
+	font-size:18px;	
+}
+
+.margin-right {
+	margin-right:30px;	
+}
+
+.btn-color {
+	background-color:#2473DD;	
+}
+
+.font-size-20 {
+	font-size:20px;	
+}
+
+.top_nav {
+	background:#161616;
+	font-weight:600;
+	color:#FFFFFF;
+	height:auto;
+	width:100%;
+	position:fixed;
+	-webkit-box-shadow: 0px 3px 5px 1px rgba(196,188,196,1);
+	-moz-box-shadow: 0px 3px 5px 1px rgba(196,188,196,1);
+	box-shadow: 0px 3px 5px 1px rgba(196,188,196,1);
+	border-radius: 0px 0px 5px 5px;
+}
+
+.info-nav {
+	float:right;
+	width:60%;
+	text-align:right;
+	word-spacing:20px;
+	padding:15px 15px 0px 0px;
+	font-family:"libertadbold_italic";
+	letter-spacing:2px;
+	font-weight:300;
+}
+
+.logo {
+	float:left;
+	width:40%;	
+	padding: 3px 10px 10px 10px;
+}
+
+.info-nav a {
+	color:#FFFFFF;
+	text-decoration:none;	
+}
+
+
+.main-body {
+	padding:10px 10px 10px 10px;
+	color:#161616;	
+}
+
+.data {
+	padding: 15px 0px 0px 0px;
+	margin-top:5%;	
+	width:auto;
+	height:auto;
+}
