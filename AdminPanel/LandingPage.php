@@ -13,10 +13,8 @@ $user_details = null;
 <head>
 <meta charset="utf-8">
 <title>Admin</title>
-
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
-
 <script>
 window.onkeyup = function(e) {
    var key = e.keyCode ? e.keyCode : e.which;
@@ -40,7 +38,6 @@ function LAUuser() {
 	   document.getElementById("LAU").click();	
 }
 </script>
-
 </head>
 <body class="mainAdmin">
 <?php
@@ -100,83 +97,69 @@ if($operation==="new_login") {
 //////////////////////////////////////// After Successful Authentication ////////////////////////////////
 ?>
 <div>
-	
-	<div class="top_nav col-lg-11 col-md-11 col-sm-11">
-		<div class="logo">
-        LOGO HERE
-    	</div>
-        <div class="info-nav">
-        <?php echo $user_details['userName']." | XYZ user Info ";  ?>	
-        </div>
-    </div>
-    
-    <div class="col-lg-12 col-md-12 col-sm-12 main-body">
-			<div class="data">
-            <div class="col-lg-12">
-            	 <nav class="navbar navbar-inverse">
-                 	<div class="container-fluid">
-						<div class="navbar-header">
-							<a class="navbar-brand" style="color:#EDEDED;"><?php echo $user_details['userName']; ?></a>
-						</div>
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="LandingPage.php">Home</a></li>
-							<li class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Add<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a onClick="AAUuser();">Add Admin User</a></li>
-									<li><a onClick="LAUuser();">Add Local Admin User</a></li>
-        						</ul>
-      						</li>
-                            
-							<li class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#">View<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Booking Details</a></li>
-									<li><a href="#">Logs</a></li>
-                                    <li><a href="#">View Users</a></li>
-        						</ul>
-      						</li>
-                            <li class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Transections<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Paid</a></li>
-									<li><a href="#">Booked</a></li>
-        						</ul>
-      						</li>
-                            <li class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Bookings<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Book Ticket</a></li>
-									<li><a href="#">Accept Tickets</a></li>
-        						</ul>
-      						</li>
-                            <li class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Coupons<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Add Coupons</a></li>
-									<li><a href="#">View/Delele Coupons</a></li>
-        						</ul>
-      						</li>  
-					</ul>
-						<ul class="nav navbar-nav navbar-right">
-							<li><a href="signout.php"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
-						</ul>
-					</div>
-				</nav>
-            </div>
-            <div class="col-lg-3">
-				<ul class="nav nav-pills nav-stacked">
-                	<li class="active"><a data-toggle="tab" href="#menu">Home</a></li>
-					<li><a data-toggle="tab" href="#menu1">Accept Ticket</a></li>
-					<li><a data-toggle="tab" href="#menu2" id="switchTab2">Add Users</a></li>
-					<li><a data-toggle="tab" href="#menu3">Add Coupons</a></li>
-				</ul>
-            </div>
-            <div class="col-lg-8">
-            	<div class="tab-content">
-					<div id="menu" class="tab-pane fade in active text-center">
-                        <h3> User Operations</h3>
-                         <?php
+  <div class="top_nav col-lg-11 col-md-11 col-sm-11">
+    <div class="logo"> LOGO HERE </div>
+    <div class="info-nav"> <?php echo $user_details['userName']." | XYZ user Info ";  ?> </div>
+  </div>
+  <div class="col-lg-12 col-md-12 col-sm-12 main-body">
+    <div class="data">
+      <div class="col-lg-12">
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header"> <a class="navbar-brand" style="color:#EDEDED;"><?php echo $user_details['userName']; ?></a> </div>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="LandingPage.php">Home</a></li>
+              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Add<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a onClick="AAUuser();">Add Admin User</a></li>
+                  <li><a onClick="LAUuser();">Add Local Admin User</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">View<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Booking Details</a></li>
+                  <li><a href="#">Logs</a></li>
+                  <li><a href="#">View Users</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Transections<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Paid</a></li>
+                  <li><a href="#">Booked</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Bookings<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Book Ticket</a></li>
+                  <li><a href="#">Accept Tickets</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Coupons<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Add Coupons</a></li>
+                  <li><a href="#">View/Delele Coupons</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="signout.php"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="col-lg-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li class="active"><a data-toggle="tab" href="#menu">Home</a></li>
+          <li><a data-toggle="tab" href="#menu1">Accept Ticket</a></li>
+          <li><a data-toggle="tab" href="#menu2" id="switchTab2">Add Users</a></li>
+          <li><a data-toggle="tab" href="#menu3">Add Coupons</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8">
+        <div class="tab-content">
+          <div id="menu" class="tab-pane fade in active text-center">
+            <h3> User Operations</h3>
+            <?php
 							if(isset($_GET['Operations']) and $_GET['Operations'] === "addAAU") {
 								if(isset($_POST['AAUuserName']) and isset($_POST['AAUuserPassword'])) {
 									$AAUname = $_POST['AAUuserName'];
@@ -194,61 +177,57 @@ if($operation==="new_login") {
 								}
 							}
 						?>
-                    </div>
-                    <div id="menu1" class="tab-pane fade text-center">
-                        <h3> Accept Tickets</h3>
-					
-                    </div>
-					<div id="menu2" class="tab-pane fade text-center">
-						<h3>Add Users</h3>
-							<ul class="nav nav-tabs">
-								<li class="active"><a data-toggle="tab" href="#UserMenu" id="AAU"> <strong> 1. </strong>ADD AGENT ADMIN</a></li>
-								<li><a data-toggle="tab" href="#UserMenu1" id="LAU"> <strong> 2. </strong> ADD LOCAL ADMIN </a></li>
-                            </ul>
-                            <div class="tab-content">
-								<div id="UserMenu" class="tab-pane fade in active">
-									<h3>ADD AGENT ADMIN</h3>
-									<form role="form" action="<?php echo htmlentities($_SERVER['PHP_SELF'])."?Operations=addAAU"; ?>" method="post">
-                                    	<div class="form-group">
-                                        	<input type="text" class="form-control" name="AAUuserName" placeholder="User Name" required autofocus autocomplete="off"/>
-                                        </div>
-                                        <div class="form-group">
-                                        	<input type="text" class="form-control" name="AAUuserPassword" placeholder="User Password" required/>
-                                        </div>
-                                        <div class="form-group">
-                                        	<input type="submit" class="btn btn-default btn-lg" value="ADD"/>
-                                        </div>
-                                    </form>
-                                </div>
-								<div id="UserMenu1" class="tab-pane fade">
-									<h3>ADD LOCAL ADMIN</h3>
-                                    	<form role="form" action="<?php echo htmlentities($_SERVER['PHP_SELF'])."?Operations=addLAU"; ?>" method="post">
-
-                                    	<div class="form-group">
-                                        	<input type="text" class="form-control" name="LAUuserName" placeholder="User Name" required autofocus autocomplete="off"/>
-                                        </div>
-                                        <div class="form-group">
-                                        	<input type="text" class="form-control" name="LAUuserPassword" placeholder="User Password" required/>
-                                        </div>
-                                        <div class="form-group">
-                                        	<input type="submit" class="btn btn-default btn-lg" value="ADD"/>
-                                        </div>
-                                        </form>
-                                </div>
-							</div>
-					</div>
-					<div id="menu3" class="tab-pane fade text-center">
-						<h3>Add Coupons</h3>
-			
-					</div>
-				</div>
-			</div>
+          </div>
+          <div id="menu1" class="tab-pane fade text-center">
+            <h3> Accept Tickets</h3>
+          </div>
+          <div id="menu2" class="tab-pane fade text-center">
+            <h3>Add Users</h3>
+            <ul class="nav nav-tabs">
+              <li class="active"><a data-toggle="tab" href="#UserMenu" id="AAU"> <strong> 1. </strong>ADD AGENT ADMIN</a></li>
+              <li><a data-toggle="tab" href="#UserMenu1" id="LAU"> <strong> 2. </strong> ADD LOCAL ADMIN </a></li>
+            </ul>
+            <div class="tab-content">
+              <div id="UserMenu" class="tab-pane fade in active">
+                <h3>ADD AGENT ADMIN</h3>
+                <form role="form" action="<?php echo htmlentities($_SERVER['PHP_SELF'])."?Operations=addAAU"; ?>" method="post">
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="AAUuserName" placeholder="User Name" required autofocus autocomplete="off"/>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="AAUuserPassword" placeholder="User Password" required/>
+                  </div>
+                  <div class="form-group">
+                    <input type="submit" class="btn btn-default btn-lg" value="ADD"/>
+                  </div>
+                </form>
+              </div>
+              <div id="UserMenu1" class="tab-pane fade">
+                <h3>ADD LOCAL ADMIN</h3>
+                <form role="form" action="<?php echo htmlentities($_SERVER['PHP_SELF'])."?Operations=addLAU"; ?>" method="post">
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="LAUuserName" placeholder="User Name" required autofocus autocomplete="off"/>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="LAUuserPassword" placeholder="User Password" required/>
+                  </div>
+                  <div class="form-group">
+                    <input type="submit" class="btn btn-default btn-lg" value="ADD"/>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div id="menu3" class="tab-pane fade text-center">
+            <h3>Add Coupons</h3>
+          </div>
+        </div>
       </div>
+    </div>
   </div>
 </div>
 </div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
 <script src="js/bootstrap.js"></script>
 </body>
 <?php 
@@ -313,18 +292,12 @@ function add_user($Uname,$Upass,$Urole) {
 		
 		if($con->query($query)) {
 		?>
-		<div class="alert alert-success fade in" style="text-align:left;">
-			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-			<strong>Success !</strong> Admin User is Added. USER : <?php echo $Uname1; ?> 
-		</div>
-		<?php   
+<div class="alert alert-success fade in" style="text-align:left;"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Success !</strong>Admin User is Added. USER :<?php echo $Uname1; ?></div>
+<?php   
 		} else {
 		?>
-        <div class="alert alert-danger fade in" style="text-align:left;">
-			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-			<strong> Unsuccess !</strong> User already EXISTS 
-		</div>	
-		<?php
+<div class="alert alert-danger fade in" style="text-align:left;"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Unsuccess !</strong>User already EXISTS</div>
+<?php
         }
 		
 	} catch(Exception $ex) {
