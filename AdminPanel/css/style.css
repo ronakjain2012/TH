@@ -84,6 +84,17 @@
 	font-weight:300;
 }
 
+.bottom {
+	transition:all 1s linear;
+	-moz-transition:all 1s linear;
+	-o-transition:all 1s linear;
+	-webkit-transition:border 1s ease-in; 	
+}
+
+.bottom:focus {
+	border-bottom:solid 5px #47B149;	
+}
+
 .logo {
 	float:left;
 	width:40%;	

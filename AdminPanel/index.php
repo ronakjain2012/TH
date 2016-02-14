@@ -16,10 +16,10 @@
 <div class="col-lg-6 margin-top-30" id="main">
 <form action="dashboard.php" method="post" role="form">
 <div class="form-group">
-  <input type="text" name="userName" class="form-control text-center" placeholder="Username" required />
+  <input type="text" name="userName" class="form-control text-center bottom" placeholder="Username" required />
 </div>
 <div class="form-group">
-  <input type="password" name="userPassword" class="form-control text-center" placeholder="Password" required/>
+  <input type="password" name="userPassword" class="form-control text-center bottom" placeholder="Password" required/>
 </div>
 <div class="form-group">
   <input type="hidden" value="new_login" name="operation" />
