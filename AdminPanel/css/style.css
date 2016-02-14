@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
+@import url(https://fonts.googleapis.com/css?family=Slabo+27px);
 @font-face {
     font-family: 'zektonitalic';
     src: url('zektonit-webfont.eot');
@@ -78,10 +79,8 @@
 	float:right;
 	width:60%;
 	text-align:right;
-	word-spacing:20px;
+	font-family: 'Slabo 27px', serif;	
 	padding:15px 15px 0px 0px;
-	font-family:"libertadbold_italic";
-	letter-spacing:2px;
 	font-weight:300;
 }
 

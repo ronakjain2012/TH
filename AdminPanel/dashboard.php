@@ -5,7 +5,7 @@ $host = "localhost";
 $user = "root";
 $pwd = "root";
 $db = "adminp";
-$url = "http://localhost/Try1/adminP.php";
+$url = "http://localhost/TH/index.php";
 $user_details = null;
 ?>
 <!doctype html>
@@ -13,30 +13,13 @@ $user_details = null;
 <head>
 <meta charset="utf-8">
 <title>Admin</title>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="../TH/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="../TH/css/style.css" rel="stylesheet" type="text/css">
 <script>
-window.onkeyup = function(e) {
-   var key = e.keyCode ? e.keyCode : e.which;
-   if (key == 65 || key == 97) {
+function AUuser() {
 	   document.getElementById("switchTab2").click();
-       document.getElementById("AAU").click();
-   }
-   if (key == 76 || key == 108) {
-       document.getElementById("switchTab2").click();
-	   document.getElementById("LAU").click();
-   }
 }
 
-function AAUuser() {
-	   document.getElementById("switchTab2").click();
-       document.getElementById("AAU").click();		
-}
-
-function LAUuser() {
-       document.getElementById("switchTab2").click();
-	   document.getElementById("LAU").click();	
-}
 </script>
 </head>
 <body class="mainAdmin">
@@ -99,7 +82,7 @@ if($operation==="new_login") {
 <div>
   <div class="top_nav col-lg-11 col-md-11 col-sm-11">
     <div class="logo"> LOGO HERE </div>
-    <div class="info-nav"> <?php echo $user_details['userName']." | XYZ user Info ";  ?> </div>
+    <div class="info-nav"> <?php echo $user_details['userName']." &nbsp; | &nbsp; XYZ user Info ";?> </div>
   </div>
   <div class="col-lg-12 col-md-12 col-sm-12 main-body">
     <div class="data">
@@ -108,48 +91,64 @@ if($operation==="new_login") {
           <div class="container-fluid">
             <div class="navbar-header"> <a class="navbar-brand" style="color:#EDEDED;"><?php echo $user_details['userName']; ?></a> </div>
             <ul class="nav navbar-nav">
-              <li class="active"><a href="LandingPage.php">Home</a></li>
-              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Add<span class="caret"></span></a>
+              <li class="active"><a href="../TH/dashboard.php">Dashboard</a></li>
+              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Users<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a onClick="AAUuser();">Add Admin User</a></li>
-                  <li><a onClick="LAUuser();">Add Local Admin User</a></li>
+                  <li><a onClick="AUuser();">Add User</a></li>
+                  <li><a onClick="#">View Users</a></li>
                 </ul>
               </li>
-              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">View<span class="caret"></span></a>
+              <?php if($user_details['role']==='s') {
+					echo "
+					<li class='dropdown'> <a class='dropdown-toggle' data-toggle='dropdown' href='#'>Location<span class='caret'></span></a>
+					</li>
+					";  
+			  }
+			  ?>
+              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Route<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Booking Details</a></li>
-                  <li><a href="#">Logs</a></li>
-                  <li><a href="#">View Users</a></li>
+                  <li><a href="#">New Route</a></li>
+                  <li><a href="#">View Route</a></li>
                 </ul>
               </li>
-              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Transections<span class="caret"></span></a>
+              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Buses<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Paid</a></li>
-                  <li><a href="#">Booked</a></li>
+                  <li><a href="#">New Bus</a></li>
+                  <li><a href="#">Add Buses</a></li>
                 </ul>
               </li>
-              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Bookings<span class="caret"></span></a>
+              
+              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tickets<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="#">Book Ticket</a></li>
-                  <li><a href="#">Accept Tickets</a></li>
+                  <li><a href="#">Ticket Details</a></li>
                 </ul>
               </li>
+              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Transaction<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Ticket Transaction</a></li>
+                  <li><a href="#">Agency Transaction</a></li>
+                </ul>
+              </li>
+              
               <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Coupons<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Add Coupons</a></li>
-                  <li><a href="#">View/Delele Coupons</a></li>
+                  <li><a href="#">New Coupons</a></li>
+                  <li><a href="#">Coupons Details</a></li>
                 </ul>
               </li>
+              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings</a></li>
+              
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="signout.php"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
+              <li><a href="../TH/signout.php"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
             </ul>
           </div>
         </nav>
       </div>
       <div class="col-lg-3">
         <ul class="nav nav-pills nav-stacked">
-          <li class="active"><a data-toggle="tab" href="#menu">Home</a></li>
+          <li class="active"><a data-toggle="tab" href="#menu">Dashboard</a></li>
           <li><a data-toggle="tab" href="#menu1">Accept Ticket</a></li>
           <li><a data-toggle="tab" href="#menu2" id="switchTab2">Add Users</a></li>
           <li><a data-toggle="tab" href="#menu3">Add Coupons</a></li>
@@ -158,7 +157,7 @@ if($operation==="new_login") {
       <div class="col-lg-8">
         <div class="tab-content">
           <div id="menu" class="tab-pane fade in active text-center">
-            <h3> User Operations</h3>
+            <h3> Operations</h3>
             <?php
 							if(isset($_GET['Operations']) and $_GET['Operations'] === "addAAU") {
 								if(isset($_POST['AAUuserName']) and isset($_POST['AAUuserPassword'])) {
@@ -176,7 +175,7 @@ if($operation==="new_login") {
 									add_user($LAUname,$LAUpass,$LAUrole);
 								}
 							}
-						?>
+			?>
           </div>
           <div id="menu1" class="tab-pane fade text-center">
             <h3> Accept Tickets</h3>
@@ -228,7 +227,7 @@ if($operation==="new_login") {
 </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
-<script src="js/bootstrap.js"></script>
+<script src="../TH/js/bootstrap.js"></script>
 </body>
 <?php 
 	} else {

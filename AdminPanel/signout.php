@@ -5,7 +5,7 @@ date_default_timezone_set('Asia/Kolkata');
 		$user = "root";
 		$pwd = "root";
 		$db = "adminp";
-		$url = "http://localhost/Try1/adminP.php";
+		$url = "http://localhost/TH/index.php";
 		$con = new MySQLi($host,$user,$pwd);		
 		$con->select_db($db);
 		$id = session_id();
