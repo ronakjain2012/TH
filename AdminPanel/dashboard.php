@@ -46,8 +46,8 @@ if($operation==="new_login") {
 	} else {
 		$con->select_db($db);
 		if( isset($_POST['userName']) and isset($_POST['userPassword']) ) {
-			$userN = hash('sha256',$_POST['userName']);
-			$userPwd = hash('sha256',$_POST['userPassword']);
+			$userN = hash('md5',$_POST['userName']);
+			$userPwd = hash('md5',$_POST['userPassword']);
 			$query = "select * from admin_users where u_name='".$userN."' and u_pwd='".$userPwd."'";
 			if($res = $con->query($query)){
 				if($res->num_rows === 1) {
@@ -285,8 +285,8 @@ function add_user($Uname,$Upass,$Urole) {
 		$con = new MySQLi($host,$user,$pwd);		
 		$con->select_db($db);
 		$Uname1 = $Uname;
-		$Uname = hash('sha256',$Uname);
-		$Upass = hash('sha256',$Upass);
+		$Uname = hash('md5',$Uname);
+		$Upass = hash('md5',$Upass);
 		$query = "insert into admin_users (u_name,u_pwd,u_role) values('".$Uname."','".$Upass."','".$Urole."')";
 		
 		if($con->query($query)) {
